@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ILY iyah</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Can You Forgive Me?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+    }
+
+    h1 {
+      color: #d62828;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #06d6a0;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ef476f;
+      color: white;
+    }
+
+    #finalMessage {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #finalMessage img {
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    #messageText {
+      font-size: 35px;
+      color: #264653;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Can you forgive me na babi? 🥺</h1>
+  <div id="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <div id="finalMessage">
+    <div id="messageText">Sorry babi if pinag hintay kita, sorry din sa mga nasabi ko, sorry din kasi pinaramdam ko sayo na hindi kita inuuna. Promise ko hindi kona sayo ipaparamdam lahat ng yan. I LOVE YOU ❤️</div>
+    <img src=https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamh6ZTZ2Nm92bmNmcmYzMnUyMmU5cXdqMnI3NGszOXoyMHhrNjAyYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F9UAJo9PulQ8E/giphy.gif alt="Cute cat gif">
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const buttons = document.getElementById('buttons');
+    const finalMessage = document.getElementById('finalMessage');
+    let yesBtnScale = 1;
+
+    noBtn.addEventListener('click', () => {
+      yesBtnScale += 0.2;
+      yesBtn.style.transform = `scale(${yesBtnScale})`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+      buttons.style.display = 'none';
+      document.querySelector('h1').style.display = 'none';
+      finalMessage.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
